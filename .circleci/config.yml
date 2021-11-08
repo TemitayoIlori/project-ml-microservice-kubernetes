@@ -22,22 +22,22 @@ jobs:
           name: install dependencies
           command: |
             python3 -m venv devops
-            ~/.devops/bin/activate
+            . devops/bin/activate
             pip install -r requirements.txt
       - save_cache:
           paths:
-            - ~/.devops
+            - . devops
           key: v1-dependencies-{{ checksum "requirements.txt" }}
         
       # run tests!
       - run:
           name: run tests
           command: |
-            ~/.devops/bin/activate
+            . devops/bin/activate
             make test
       # run lints!
       - run:
           name: run lint
           command: |
-            ~/.devops/bin/activate
+            . devops/bin/activate
             make lint
