@@ -1,4 +1,4 @@
-## The Makefile includes instructions on environment setup and lint tests
+# The Makefile includes instructions on environment setup and lint tests
 # Create and activate a virtual environment
 # Install dependencies in requirements.txt
 # Dockerfile should pass hadolint
@@ -21,9 +21,11 @@ test:
 	#python -m pytest --nbval notebook.ipynb
 
 validate-circleci:
+	# See https://circleci.com/docs/2.0/local-cli/#processing-a-config
 	circleci config process .circleci/config.yml
 
 run-circleci-local:
+	# See https://circleci.com/docs/2.0/local-cli/#running-a-job
 	circleci local execute
 
 lint:
@@ -31,11 +33,10 @@ lint:
 	sudo wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64 &&\
 	   sudo chmod +x /bin/hadolint
 	# This is linter for Dockerfiles
-	#/bin/hadolint Dockerfile
 	hadolint Dockerfile
 
 	# This is a linter for Python source code linter: https://www.pylint.org/
 	# This should be run from inside a virtualenv
-	pylint --disable=R,C,W1203 app.py
+	pylint --disable=R,C,W1203,W1309 app.py
 
 all: install lint test
