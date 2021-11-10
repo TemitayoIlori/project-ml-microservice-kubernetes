@@ -4,7 +4,8 @@
 
 # Step 1:
 # Build image and add a descriptive tag
-docker build --t=ciregbu159/flask-app .
+# docker build -t yourusername/repository-name .
+docker build -t ciregbu159/flask-app .
 
 # Step 2: 
 # List docker images
