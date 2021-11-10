@@ -6,7 +6,7 @@
 # Step 1:
 # Create dockerpath
 # dockerpath=<your docker ID/path>
-dockerpath=ciregbu159/flaskapp
+dockerpath=ciregbu159/flask-app
 
 # Step 2:  
 # Authenticate & tag
