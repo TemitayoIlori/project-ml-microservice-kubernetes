@@ -8,8 +8,8 @@
 setup:
 	# Create python virtualenv & source it
 	# source ~/.devops/bin/activate
-	python3 -m venv ~/venv
-	source ~/venv/bin/activate
+	python3 -m venv venv
+	source venv/bin/activate
 
 install:
 	# This should be run from inside a virtualenv
@@ -39,6 +39,6 @@ lint:
 	# This is a linter for Python source code linter: https://www.pylint.org/
 	# This should be run from inside a virtualenv
 	#/home/iregcix/.local/bin/pylint --disable=R,C,W1203,W1309 app.py
-	/home/ubuntu/venv/bin/pylint  --disable=R,C,W1203,W1309 app.py
+	venv/bin/pylint  --disable=R,C,W1203,W1309 app.py
 	
 all: install lint test

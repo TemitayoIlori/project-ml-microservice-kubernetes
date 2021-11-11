@@ -5,7 +5,7 @@
 # Step 1:
 # This is your Docker ID/path
 # dockerpath=<>
-dockerpath=ciregbu159/flask-app
+dockerpath=ciregbu/flask-app
 
 # Step 2
 # Run the Docker Hub container with kubernetes

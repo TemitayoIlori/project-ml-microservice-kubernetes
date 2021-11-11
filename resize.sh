@@ -26,10 +26,10 @@ sleep 1
 done
 
 #Check if we're on an NVMe filesystem
-if [ $(readlink -f /dev/xvda) = "/dev/xvda" ]
+if [ $(readlink -f /dev/xvda) = "/dev/nvme0n1p1" ]
 then
   # Rewrite the partition table so that the partition takes up all the space that it can.
-  sudo growpart /dev/xvda 1
+  sudo growpart /dev/nvme0n1p1 1
 
   # Expand the size of the file system.
   # Check if we are on AL2
