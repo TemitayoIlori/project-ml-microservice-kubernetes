@@ -35,12 +35,7 @@ jobs:
           command: |
             . venv/bin/activate
             make test
-            
-      - save_cache:
-          paths:
-            - ./venv
-          key: v1-dependencies-{{ checksum "requirements.txt" }}
-        
+
       # run lints!
       - run:
           name: run lint
