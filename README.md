@@ -6,6 +6,9 @@
 
 In this project, I had to operationalise a working Machine Learning Microsservice API using Kubernetes Kubernetes, which is an open-source system for automating the management of containerized applications. The microservice API has been trained to predict housing prices in Boston according to several features, such as avergae rooms in a home and data about highway access, teacher-to-pupil ratios, and so on. 
 
+## GitHub URL
+https://github.com/chrisiregbu/project-ml-microservice-kubernetes 
+
 I completed the following as part of this project:
 
 * Tested my project code using linting
@@ -15,10 +18,6 @@ I completed the following as part of this project:
 * Configured Kubernetes and created a Kubernetes cluster using K3s in Cloud9 environment
 * Deployed the containerized application using Kubernetes and made a prediction. The output of the prediction is in the file "kubernetes_out.txt"
 * Uploaded a complete Github repo with CircleCI to indicate that my code has been tested
-
-In this project, you will apply the skills you have acquired in this course to operationalize a Machine Learning Microservice API. 
-
-You are given a pre-trained, `sklearn` model that has been trained to predict housing prices in Boston according to several features, such as average rooms in a home and data about highway access, teacher-to-pupil ratios, and so on. You can read more about the data, which was initially taken from Kaggle, on [the data source site](https://www.kaggle.com/c/boston-housing). This project tests your ability to operationalize a Python flask app—in a provided file, `app.py`—that serves out predictions (inference) about housing prices through API calls. This project could be extended to any pre-trained machine learning model, such as those for image recognition and data labeling.
 
 ### Project Tasks
 
@@ -92,3 +91,4 @@ run_kubernetes.sh:
 
 12. model_data: 
     This contains the data the application uses to make predictions
+
