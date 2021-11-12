@@ -22,21 +22,19 @@ jobs:
           name: install dependencies
           command: |
             python3 -m venv venv
-            cd venv/Scripts
-            . activate
+            . venv/bin/activate
             cd ..
             sudo pip install --upgrade pip && pip install -r requirements.txt
       - save_cache:
           paths:
-            - venv/Scripts
+            - ./venv
           key: v1-dependencies-{{ checksum "requirements.txt" }}
         
       # run tests!
       - run:
           name: run tests
           command: |
-            cd venv/Scripts
-            . activate
+            . venv/bin/activate
             make test
       # run lints!
       - run:
